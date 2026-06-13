@@ -2,6 +2,11 @@ const express = require("express");
 const router = express.Router();
 const Product = require("../models/product");
 
+router.get("/", (req, res) => {
+  res.json({ message: "Products working" });
+});
+
+module.exports = router;
 // GET all products
 router.get("/", async (req, res) => {
   try {
