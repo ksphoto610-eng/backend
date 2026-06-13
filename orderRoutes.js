@@ -2,6 +2,13 @@ const express = require("express");
 const router = express.Router();
 const Order = require("../models/Order");
 
+
+router.get("/", (req, res) => {
+  res.json({ message: "Orders working" });
+});
+
+module.exports = router;
+module.exports = router;
 // GET all orders
 router.get("/", async (req, res) => {
   try {
